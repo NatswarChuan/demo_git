@@ -7,11 +7,11 @@ class ProductModel extends Db
         return parent::select($sql);
     }
 
-    public function searchProducts($search)
+    public function searchProducts($_search)
     {
-        $_search = `%$search%`;
+        $search = '%'.$_search.'%';
         $sql = parent::$conection->prepare("SELECT * FROM `product` WHERE `product_title` LIKE ?");
-        $sql->bind_param("s", $_search);
+        $sql->bind_param("s", $search);
         return parent::select($sql);
     }
 
