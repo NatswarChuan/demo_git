@@ -1,3 +1,24 @@
+<?php
+$data = [
+    [
+        'product_title' => 'Vu Minh Chuan',
+        'product_id' => 1
+    ],
+    [
+        'product_title' => 'Vu Minh Chuan',
+        'product_id' => 1
+    ],
+    [
+        'product_title' => 'Vu Minh Chuan',
+        'product_id' => 1
+    ],
+    [
+        'product_title' => 'Vu Minh Chuan',
+        'product_id' => 1
+    ]
+]
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +31,7 @@
 
 <body>
     <?php
-    foreach ($productList as $item) {
+    foreach ($data as $item) {
     ?>
         <div class="title"><?php $item['product_title'] ?></div>
     <?php
