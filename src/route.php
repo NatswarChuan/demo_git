@@ -11,6 +11,9 @@ if (count(URL) != 0) {
         case 'san-pham':
             ProductController::GetProductController();
             break;
+        case 'thong-tin-san-pham':
+            ProductController::GetProductController();
+            break;
         default:
             include ROOT_DIR . '/src/views/404.php';
             break;
