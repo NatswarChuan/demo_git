@@ -9,7 +9,13 @@
 </head>
 
 <body>
-    đâsd
+    <?php
+    foreach ($productList as $item) {
+    ?>
+        <div class="title"><?php $item['product_title'] ?></div>
+    <?php
+    }
+    ?>
 </body>
 
 </html>
