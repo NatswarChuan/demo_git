@@ -6,7 +6,10 @@ class ProductController
     {
         $productModel = new ProductModel();
         $productList = $productModel->getProducts();
-        include_once ROOT_DIR . '/src/views/trang-chu.php';
+        $search = 'chuan';
+        $productListSearch = $productModel->searchProducts($search);
+        var_dump($productList);
+        var_dump($productListSearch);
     }
 
     public static function SearchController()
@@ -32,7 +35,8 @@ class ProductController
         }
     }
 
-    public static function ProductInfoController(){
+    public static function ProductInfoController()
+    {
         $product_link = explode('-', URL[1]);
         $id = $product_link[count($product_link) - 1];
         unset($product_link[count($product_link) - 1]);
@@ -44,6 +48,5 @@ class ProductController
         } else {
             var_dump($productList);
         }
-        
     }
 }
