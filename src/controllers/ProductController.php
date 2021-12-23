@@ -28,7 +28,7 @@ class ProductController
         if (!$productList) {
             include_once ROOT_DIR . '/src/views/404.php';
         } else {
-            var_dump($productList);
+            include_once ROOT_DIR . '/src/views/san-pham.php';
         }
     }
 
