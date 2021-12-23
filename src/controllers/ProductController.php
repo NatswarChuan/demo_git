@@ -8,8 +8,7 @@ class ProductController
         $productList = $productModel->getProducts();
         $search = 'chuan';
         $productListSearch = $productModel->searchProducts($search);
-        var_dump($productList);
-        var_dump($productListSearch);
+        include_once ROOT_DIR . '/src/views/san-pham.php';
     }
 
     public static function SearchController()
